@@ -1,0 +1,337 @@
+:root {
+  --main-color: #e3eef8;
+  --bg-color: #f8fbfd;
+  --semi-intense-color: #c9def1;
+  --intense-color: #a6c9e9;
+  --select-color: #92bde4;
+  --text-color: #333333;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  src: url(fonts/AtkinsonHyperlegibleMono-VariableFont_wght.ttf);
+}
+
+body {
+  margin: 0px;
+  background-color: var(--bg-color);
+}
+
+nav button span.material-symbols-outlined {
+  visibility: hidden;
+  position: absolute;
+}
+
+nav {
+  height: 7vh;
+  background-color: var(--main-color);
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  border-bottom: groove 2px #d6e3f5;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+dialog {
+  padding-left: 1.5vw;
+}
+
+#creatonPopUp {
+  width: 20vw;
+  height: 49vh;
+  justify-self: center;
+  margin: 10vh;
+  padding-right: 2vw;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  align-self: center;
+}
+
+#tagCreatonPopUp {
+  width: 20vw;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+  margin: 7vh;
+  padding-right: 2vw;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+}
+
+button {
+  background-color: var(--intense-color);
+  margin-top: 3em;
+  margin-bottom: 1em;
+  margin-right: 0vw;
+  width: 6vw;
+  border: 3px black outset;
+  border-radius: 10px;
+  align-self: center;
+  font-family: "Atkinson Hyperlegible Mono", serif;
+  color: var(--text-color);
+  float: left;
+  font-weight: 800;
+  font-size: medium;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doubleDialogButtons {
+  margin-bottom: 1em;
+}
+
+.doubleDialogButtons:nth-of-type(1) {
+  margin-right: 8vw;
+}
+
+button:active {
+  background-color: var(--select-color);
+}
+
+.navButtons {
+  float: right;
+  border-radius: 0;
+  border: none;
+  border-left: 3px var(--select-color) groove;
+  height: 7vh;
+  width: 10vw;
+  margin-top: 0;
+  background-color: var(--intense-color);
+  cursor: pointer;
+  text-align: center;
+}
+
+.navButtons p {
+  font-family: "Atkinson Hyperlegible Mono", serif;
+  color: var(--text-color);
+}
+
+#sortOption {
+  width: 6vw;
+  font-family: "Atkinson Hyperlegible Mono", serif;
+  background-color: var(--semi-intense-color);
+  font-weight: 800;
+  font-size: medium;
+}
+
+.navButtons:hover {
+  background-color: var(--select-color);
+}
+
+input {
+  border-radius: 5px;
+  border: 3px var(--select-color) inset;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: var(--text-color);
+  width: 20vw;
+  background-color: var(--main-color);
+}
+
+select {
+  border-radius: 5px;
+  border: 3px var(--select-color) inset;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: var(--text-color);
+  width: 20vw;
+  background-color: var(--main-color);
+}
+
+option:enabled {
+  background-color: var(--main-color);
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+h3 {
+  font-family: sans-serif;
+  font-weight: 700;
+  color: var(--text-color);
+  align-self: center;
+  position: absolute;
+}
+
+table {
+  width: 70%;
+  justify-self: center;
+  margin-top: 15vh;
+  background-color: var(--intense-color);
+  padding: 1%;
+  border-radius: 10px;
+}
+
+thead {
+  font-family: "Atkinson Hyperlegible Mono", serif;
+  font-weight: 600;
+}
+
+tbody {
+  background-color: aliceblue;
+  width: 100%;
+  font-family: "Atkinson Hyperlegible Mono", serif;
+}
+
+#statusList {
+  border-radius: 20px;
+  width: 5vw;
+  text-align: center;
+  font-weight: 800;
+}
+
+#deadlineList {
+  width: 5vw;
+  text-align: center;
+}
+
+#tagListPopUp {
+  width: 30vw;
+  max-height: 70vh;
+}
+
+#tagsList {
+  padding-left: 2em;
+}
+
+#tagsList li {
+  background-color: var(--main-color);
+  border-radius: 20px;
+  margin-top: 1em;
+  margin-right: 1em;
+  padding: 0.5em;
+}
+
+#tagsList li:nth-of-type(1) {
+  margin-top: 1em;
+}
+
+#bin {
+  width: 5vh;
+  height: 5vh;
+  text-align: center;
+  float: inline-end;
+  margin: 1vh;
+  border: none;
+}
+
+#bin:hover {
+  background-color: var(--select-color);
+}
+
+#paragraph {
+  display: flex;
+  width: 24vw;
+}
+
+.tagBin {
+  width: 4vh;
+  height: 4vh;
+  float: inline-end;
+  text-align: center;
+  border: none;
+  margin: 0;
+  background-color: var(--intense-color);
+}
+
+.tagBin:hover {
+  background-color: var(--select-color);
+}
+
+li {
+  display: flex;
+}
+
+#firstColorTaskRow {
+  background-color: var(--main-color);
+}
+
+#secondColorTaskRow {
+  background-color: var(--bg-color);
+}
+
+#titleColumn1 {
+  border-top-left-radius: 10px;
+}
+
+#titleColumnLast {
+  border-bottom-left-radius: 10px;
+}
+
+#titleColumnSingle {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#tagsColumn1 {
+  border-top-right-radius: 10px;
+}
+
+#tagsColumnLast {
+  border-bottom-right-radius: 10px;
+}
+
+#tagsColumnSingle {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+tr {
+  text-align: center;
+}
+
+#description {
+  text-align: start;
+}
+
+@media (orientation: portrait) {
+  .navButtons {
+    width: 20vw;
+  }
+
+  #sortOption {
+    width: 20vw;
+  }
+
+  #tagCreatonPopUp,
+  #creatonPopUp {
+    width: 70vw;
+    height: auto;
+    margin: 0;
+  }
+
+  #tagListPopUp button {
+    width: auto;
+  }
+
+  input {
+    width: 66vw;
+  }
+
+  nav button span.material-symbols-outlined {
+    visibility: visible;
+    position: unset;
+  }
+
+  nav button p {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .doubleDialogButtons {
+    width: 30vw;
+    margin-bottom: 1em;
+  }
+
+  .doubleDialogButtons:nth-of-type(1) {
+    margin-right: 8vw;
+  }
+}

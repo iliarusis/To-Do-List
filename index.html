@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+
+  <meta
+    name="description"
+    content="Timetable, Quality of life, deadline tracker"
+  />
+
+  <body>
+    <nav>
+      <button
+        class="navButtons"
+        id="createTask"
+        onclick="taskConstructorShow()"
+      >
+        <p>Create Task</p>
+
+        <span class="material-symbols-outlined"> calendar_add_on </span>
+      </button>
+      <button class="navButtons" onclick="tagConstructorShow()">
+        <p>Create Tag</p>
+
+        <span class="material-symbols-outlined"> new_label </span>
+      </button>
+      <button class="navButtons" onclick="tagListShow()">
+        <p>Tags</p>
+
+        <span class="material-symbols-outlined"> label </span>
+      </button>
+      <button class="navButtons" onclick="sortTasks()">
+        <p>Sort</p>
+
+        <span class="material-symbols-outlined"> sort </span>
+      </button>
+      <select class="navButtons" id="sortOption">
+        <option value="title">Title</option>
+        <option value="tags">Tags</option>
+        <option value="status">Status</option>
+        <option value="deadline">Deadline</option>
+      </select>
+    </nav>
+
+    <table>
+      <thead>
+        <tr>
+          <td>Title</td>
+          <td>Description</td>
+          <td>Deadline</td>
+          <td>Tags</td>
+          <td>Status</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <template id="productrow">
+      <tr>
+        <td></td>
+        <td></td>
+        <td id="deadlineList"></td>
+        <td></td>
+        <td id="statusList"></td>
+      </tr>
+    </template>
+
+    <dialog id="creatonPopUp">
+      <p>Title</p>
+      <input id="title" type="text" />
+      <p>Description</p>
+      <input id="description" type="text" />
+      <p>Deadline</p>
+      <input id="deadline" type="date" />
+      <p>Tags</p>
+      <select name="tags" id="tag-select"></select>
+      <p>Status</p>
+      <select name="status" id="status">
+        <option value="done">done</option>
+        <option value="in process">in process</option>
+        <option value="unstarted">unstarted</option>
+      </select>
+      <button class="doubleDialogButtons" onclick="submitTask()" id="create">
+        create
+      </button>
+      <button
+        class="doubleDialogButtons"
+        id="closeButton"
+        onclick="taskConstructorClose()"
+      >
+        close
+      </button>
+      <h3 id="submitError"></h3>
+    </dialog>
+
+    <dialog id="tagCreatonPopUp">
+      <p>Name:</p>
+      <input id="name" type="text" />
+      <button class="doubleDialogButtons" onclick="submitTag()" id="createTag">
+        create
+      </button>
+      <button
+        class="doubleDialogButtons"
+        id="closeTagConstructorButton"
+        onclick="tagConstructorClose()"
+      >
+        close
+      </button>
+      <h3 id="tagSubmitError"></h3>
+    </dialog>
+
+    <dialog id="tagListPopUp">
+      <ul id="tagsList"></ul>
+      <button onclick="tagListClose()">close</button>
+    </dialog>
+
+    <template id="tagLi">
+      <li>
+        <p id="paragraph"></p>
+        <button class="tagBin" onclick="deleteTag()">
+          <span class="material-symbols-outlined"> delete </span>
+        </button>
+      </li>
+    </template>
+
+    <script src="code.js"></script>
+    <script src="sumbit-task.js"></script>
+    <script src="tag-list-show.js"></script>
+    <script src="tag-list-close.js"></script>
+    <script src="task-constructor-show.js"></script>
+    <script src="task-constructor-close.js"></script>
+    <script src="update-table.js"></script>
+    <script src="tag-constructor-show.js"></script>
+    <script src="tag-constructor-close.js"></script>
+    <script src="submit-tag.js"></script>
+    <script src="clear-all-tasks.js"></script>
+    <script src="clear-all-tags.js"></script>
+    <script src="button-animation.js"></script>
+    <script src="tag-delete.js"></script>
+    <script src="get-all-tasks.js"></script>
+    <script src="sort-task.js"></script>
+  </body>
+</html>
